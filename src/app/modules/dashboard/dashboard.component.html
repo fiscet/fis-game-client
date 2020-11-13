@@ -1,0 +1,21 @@
+<div class="max-height flex is-flex-direction-column is-justify-content-space-between is-clipped mx-2">
+	<div class="is-flex-grow-0 has-text-centered">
+		<figure class="logo">
+			<img src="./assets/img/logo.png" alt="Logo" />
+		</figure>
+
+		<hr />
+
+		<div class="is-centered">
+			<div class="cameraContainer">
+				<app-scanner (onCodeFound)="handleCode($event)"></app-scanner>
+			</div>
+		</div>
+	</div>
+	<div class="is-flex-grow-1" style="overflow-y: auto;">
+		<p class="p-6">Content</p>
+	</div>
+	<footer class="is-flex-grow-0">
+		<p>Footer</p>
+	</footer>
+</div>

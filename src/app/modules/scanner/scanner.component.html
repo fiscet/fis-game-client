@@ -1,0 +1,10 @@
+<div id="qr-scanner">
+    <div class="has-text-danger is-large link closeButton has-text-right" (click)="enableScanner()"
+        *ngIf="scannerEnabled">
+        <span class="iconify" data-icon="mdi:close-thick" data-inline="false" data-width="32" data-height="32"></span>
+    </div>
+    <zxing-scanner *ngIf="scannerEnabled" #scanner (scanSuccess)="scanSuccessHandler($event)" [ngStyle]="{minHeight:cameraWidth+'px'}">
+    </zxing-scanner>
+    <img src="./assets/img/bullseye.jpg" alt="Scan here" class="max-width" *ngIf="!scannerEnabled"
+        (click)="enableScanner()" />
+</div>
